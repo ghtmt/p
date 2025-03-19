@@ -1,7 +1,4 @@
 {
-	"wallpaper": "https://tuapi.eees.cc/api.php?category=fengjing&type=302",
-	"homepage": "https://github.com/hjdhnx/hipy-server",
-	"homeLogo": "./img/logo500x200-1.png",
 	"sites": [
 		{
 			"key": "金牌.py",
@@ -94,17 +91,6 @@
 			"ext": ""
 		},
 		{
-			"key": "火车太顺APP.py",
-			"name": "火车太顺APP(py)",
-			"type": 3,
-			"api": "./plugin/app/火车太顺APP.py",
-			"searchable": 1,
-			"quickSearch": 1,
-			"filterable": 1,
-			"order_num": 0,
-			"ext": ""
-		},
-		{
 			"key": "剧多短剧APP.py",
 			"name": "剧多短剧APP(py)",
 			"type": 3,
@@ -131,28 +117,6 @@
 			"name": "美帕APP(py)",
 			"type": 3,
 			"api": "./plugin/app/美帕APP.py",
-			"searchable": 1,
-			"quickSearch": 1,
-			"filterable": 1,
-			"order_num": 0,
-			"ext": ""
-		},
-		{
-			"key": "胖虎APP.py",
-			"name": "胖虎APP(py)",
-			"type": 3,
-			"api": "./plugin/app/胖虎APP.py",
-			"searchable": 1,
-			"quickSearch": 1,
-			"filterable": 1,
-			"order_num": 0,
-			"ext": ""
-		},
-		{
-			"key": "视觉APP.py",
-			"name": "视觉APP(py)",
-			"type": 3,
-			"api": "./plugin/app/视觉APP.py",
 			"searchable": 1,
 			"quickSearch": 1,
 			"filterable": 1,
