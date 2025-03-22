@@ -69,6 +69,17 @@
 			"ext": ""
 		},
 		{
+			"key": "爱瓜TVAPP.py",
+			"name": "爱瓜TVAPP(py)",
+			"type": 3,
+			"api": "./plugin/app/爱瓜TVAPP.py",
+			"searchable": 1,
+			"quickSearch": 1,
+			"filterable": 1,
+			"order_num": 0,
+			"ext": ""
+		},
+		{
 			"key": "光速APP.py",
 			"name": "光速APP(py)",
 			"type": 3,
@@ -124,10 +135,32 @@
 			"ext": ""
 		},
 		{
+			"key": "三号动漫APP.py",
+			"name": "三号动漫APP(py)",
+			"type": 3,
+			"api": "./plugin/app/三号动漫APP.py",
+			"searchable": 1,
+			"quickSearch": 1,
+			"filterable": 1,
+			"order_num": 0,
+			"ext": ""
+		},
+		{
 			"key": "甜圈短剧.py",
 			"name": "甜圈短剧(py)",
 			"type": 3,
 			"api": "./plugin/html/甜圈短剧.py",
+			"searchable": 1,
+			"quickSearch": 1,
+			"filterable": 1,
+			"order_num": 0,
+			"ext": ""
+		},
+		{
+			"key": "悠悠APP.py",
+			"name": "悠悠APP(py)",
+			"type": 3,
+			"api": "./plugin/app/悠悠APP.py",
 			"searchable": 1,
 			"quickSearch": 1,
 			"filterable": 1,
@@ -161,6 +194,17 @@
 			"name": "LIVES(py)",
 			"type": 3,
 			"api": "./plugin/html/LIVES.py",
+			"searchable": 1,
+			"quickSearch": 1,
+			"filterable": 1,
+			"order_num": 0,
+			"ext": ""
+		},
+		{
+			"key": "LREEOK.py",
+			"name": "LREEOK(py)",
+			"type": 3,
+			"api": "./plugin/html/LREEOK.py",
 			"searchable": 1,
 			"quickSearch": 1,
 			"filterable": 1,
