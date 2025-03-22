@@ -1,15 +1,15 @@
 
 ## Pyramid爬虫写法
 
-目前所有爬虫继承[spider.py](https://github.com/lm317379829/PyramidStore/blob/main/base/spider.py)
+目前所有爬虫继承[spider.py](https://github.com/JJBJJ/PyramidStore/blob/main/base/spider.py)
 
 spider提供了一些需要被实现的方法和一些公共方法，请自行查阅
 
-使用 [base/local.py](https://github.com/lm317379829/PyramidStore/blob/main/base/local.py) 进行爬虫调试，所有待调试的爬虫需位于plugin目录下
+使用 [base/local.py](https://github.com/JJBJJ/PyramidStore/blob/main/base/local.py) 进行爬虫调试，所有待调试的爬虫需位于plugin目录下
 
 #### 快速开发
 
-参考[py_bilibilivd.py](https://github.com/lm317379829/PyramidStore/blob/main/plugin/py_bilibilivd.py)进行快速开发
+参考[美帕APP.py](https://github.com/JJBJJ/PyramidStore/blob/main/plugin/app/美帕APP.py)进行快速开发
 ##### 1. 爬虫方法
 
 ```python
@@ -36,7 +36,7 @@ spider提供了一些需要被实现的方法和一些公共方法，请自行�
 
 ##### 2. 本地代理
 
-代理地址写法```http://127.0.0.1:9978/proxy?do=py&type=```,其中{key}表示配置文件中key的名称,其他参数追加到地址最后即可。样例请参考py_bilibilivd.py playerContent方法
+代理地址写法```http://127.0.0.1:9978/proxy?do=py&type=```,其中{key}表示配置文件中key的名称,其他参数追加到地址最后即可。样例请参考光速.py playerContent方法
 
 ```python
     # 以下代码来自py_bilibilivd.py，完整代码请自行查看 
@@ -62,21 +62,18 @@ spider提供了一些需要被实现的方法和一些公共方法，请自行�
 ```
 ##### 3. 配置写法
 
-* key以 py_ 开头
 * ext写extend内容
 * api写py的网络地址或者本地地址
 
 ```json
 {
-    # key值必须以py_开头
-    "key": "py_bilibilivd",
-    "name": "B站",
+    "key": "光速",
+    "name": "光速",
     "type": 3,
-    "api": "http://地址/py_bilibilivd",
+    "api": "爬虫所在位置/光速.py",
     "searchable": 1,
     "quickSearch": 1,
-    "filterable": 1,
-    "ext": {"cookie": "cookies信息"}
+    "filterable": 1
 }
 ```
 
