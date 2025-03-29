@@ -1,15 +1,18 @@
 import re
 import os
-import time
 import json
+import time
 import requests
 from lxml import etree
 from abc import abstractmethod, ABCMeta
 from importlib.machinery import SourceFileLoader
-from localProxy import Proxy
+from base.localProxy import Proxy
 
 class Spider(metaclass=ABCMeta):
     _instance = None
+
+    def __init__(self):
+        self.extend = ''
 
     def __new__(cls, *args, **kwargs):
         if cls._instance:
@@ -22,52 +25,43 @@ class Spider(metaclass=ABCMeta):
     def init(self, extend=""):
         pass
 
-    @abstractmethod
     def homeContent(self, filter):
         pass
 
-    @abstractmethod
     def homeVideoContent(self):
         pass
 
-    @abstractmethod
     def categoryContent(self, tid, pg, filter, extend):
         pass
 
-    @abstractmethod
     def detailContent(self, ids):
         pass
 
-    @abstractmethod
-    def searchContent(self, key, quick):
+    def searchContent(self, key, quick, pg="1"):
         pass
 
-    @abstractmethod
-    def searchContentPage(self, key, quick, pg):
-        pass
-
-    @abstractmethod
     def playerContent(self, flag, id, vipFlags):
         pass
 
-    @abstractmethod
+    def liveContent(self, url):
+        pass
+
     def localProxy(self, param):
         pass
 
-    @abstractmethod
     def isVideoFormat(self, url):
         pass
 
-    @abstractmethod
     def manualVideoCheck(self):
         pass
 
-    @abstractmethod
-    def getName(self):
+    def action(self, action):
         pass
 
-    @abstractmethod
     def destroy(self):
+        pass
+
+    def getName(self):
         pass
 
     def getDependence(self):
@@ -92,24 +86,41 @@ class Spider(metaclass=ABCMeta):
         return re.sub(clean, '', src)
 
     def cleanText(self, src):
-        clean = re.sub('[\U0001F600-\U0001F64F\U0001F300-\U0001F5FF\U0001F680-\U0001F6FF\U0001F1E0-\U0001F1FF]', '', src)
+        clean = re.sub('[\U0001F600-\U0001F64F\U0001F300-\U0001F5FF\U0001F680-\U0001F6FF\U0001F1E0-\U0001F1FF]', '',
+                       src)
         return clean
 
-    def fetch(self, url, params=None, cookies=None, headers=None, timeout=5, verify=True, stream=False, allow_redirects = True):
-        rsp = requests.get(url, params=params, cookies=cookies, headers=headers, timeout=timeout, verify=verify, stream=stream, allow_redirects=allow_redirects)
+    def fetch(self, url, params=None, cookies=None, headers=None, timeout=5, verify=True, stream=False,
+              allow_redirects=True):
+        rsp = requests.get(url, params=params, cookies=cookies, headers=headers, timeout=timeout, verify=verify,
+                           stream=stream, allow_redirects=allow_redirects)
         rsp.encoding = 'utf-8'
         return rsp
 
-    def post(self, url, params=None, data=None, json=None, cookies=None, headers=None, timeout=5, verify=True, stream=False, allow_redirects = True):
-        rsp = requests.post(url, params=params, data=data, json=json, cookies=cookies, headers=headers, timeout=timeout, verify=verify, stream=stream, allow_redirects=allow_redirects)
+    def post(self, url, params=None, data=None, json=None, cookies=None, headers=None, timeout=5, verify=True,
+             stream=False, allow_redirects=True):
+        rsp = requests.post(url, params=params, data=data, json=json, cookies=cookies, headers=headers, timeout=timeout,
+                            verify=verify, stream=stream, allow_redirects=allow_redirects)
         rsp.encoding = 'utf-8'
         return rsp
 
     def html(self, content):
         return etree.HTML(content)
 
+    def str2json(str):
+        return json.loads(str)
+
+    def json2str(str):
+        return json.dumps(str, ensure_ascii=False)
+
     def getProxyUrl(self, local=True):
         return f'{Proxy.getUrl(local)}?do=py'
+
+    def log(self, msg):
+        if isinstance(msg, dict) or isinstance(msg, list):
+            print(json.dumps(msg, ensure_ascii=False))
+        else:
+            print(f'{msg}')
 
     def getCache(self, key):
         value = self.fetch(f'http://127.0.0.1:{Proxy.getPort()}/cache?do=get&key={key}', timeout=5).text
