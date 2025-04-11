@@ -4,7 +4,6 @@
 调试说明：打开Python编辑器，导入项目，在plugin目录下新建文件并编写代码一键运行
 '''
 import sys
-from pyquery import PyQuery as pq
 sys.path.append('..')
 from base.spider import Spider
 
@@ -26,8 +25,6 @@ class Spider(Spider):
     def destroy(self):
         pass
 
-    host='https://mov.cenguigui.cn'
-
     ahost='https://api.cenguigui.cn'
 
     headers = {
@@ -44,14 +41,8 @@ class Spider(Spider):
         }
 
     def homeContent(self, filter):
-        data=pq(self.fetch(self.host, headers=self.headers).text)
         result = {}
-        classes = []
-        for k in data('.overflow-auto button').items():
-            classes.append({
-                'type_name': k.text(),
-                'type_id': k.text()
-            })
+        classes = [{'type_name': '穿越', 'type_id': '穿越'}]
         result['class'] = classes
         return result
 
