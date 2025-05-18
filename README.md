@@ -15,10 +15,11 @@
 推荐：ok影视
 
 开袋即食：不需要挂载任何jar！不需要挂载任何jar！不需要挂载任何jar！！！
+**一定要开启存储权限！一定要开启存储权限！一定要开启存储权限！**
+
+## 配置示例
 
 配置文件sites添加内容参考 [example.json](https://github.com/JJBJJ/PyramidStore/blob/main/example.json)
-
-**一定要开启存储权限！一定要开启存储权限！一定要开启存储权限！**
 
 ### [Python爬虫写法参考](https://github.com/JJBJJ/PyramidStore/blob/main/spider.md)
 
