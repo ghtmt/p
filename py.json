@@ -1,17 +1,6 @@
 {
 	"sites": [
 		{
-			"key": "国外剧APP.py",
-			"name": "国外剧APP(py)",
-			"type": 3,
-			"api": "./plugin/app/国外剧APP.py",
-			"searchable": 1,
-			"quickSearch": 1,
-			"filterable": 1,
-			"order_num": 0,
-			"ext": ""
-		},
-		{
 			"key": "金牌.py",
 			"name": "金牌(py)",
 			"type": 3,
@@ -29,6 +18,17 @@
 			"name": "小苹果APP(py)",
 			"type": 3,
 			"api": "./plugin/app/小苹果APP.py",
+			"searchable": 1,
+			"quickSearch": 1,
+			"filterable": 1,
+			"order_num": 0,
+			"ext": ""
+		},
+		{
+			"key": "国外剧APP.py",
+			"name": "国外剧APP(py)",
+			"type": 3,
+			"api": "./plugin/app/国外剧APP.py",
 			"searchable": 1,
 			"quickSearch": 1,
 			"filterable": 1,
@@ -80,10 +80,21 @@
 			"ext": ""
 		},
 		{
-			"key": "爱瓜TVAPP.py",
-			"name": "爱瓜TVAPP(py)",
+			"key": "4KAV.py",
+			"name": "4KAV(py)",
 			"type": 3,
-			"api": "./plugin/app/爱瓜TVAPP.py",
+			"api": "./plugin/html/4KAV.py",
+			"searchable": 1,
+			"quickSearch": 1,
+			"filterable": 1,
+			"order_num": 0,
+			"ext": ""
+		},
+		{
+			"key": "嗷呜动漫.py",
+			"name": "嗷呜动漫(py)",
+			"type": 3,
+			"api": "./plugin/html/嗷呜动漫.py",
 			"searchable": 1,
 			"quickSearch": 1,
 			"filterable": 1,
@@ -102,21 +113,10 @@
 			"ext": ""
 		},
 		{
-			"key": "光速APP.py",
-			"name": "光速APP(py)",
+			"key": "海马影视APP.py",
+			"name": "海马影视APP(py)",
 			"type": 3,
-			"api": "./plugin/app/光速APP.py",
-			"searchable": 1,
-			"quickSearch": 1,
-			"filterable": 1,
-			"order_num": 0,
-			"ext": ""
-		},
-		{
-			"key": "好帅短剧.py",
-			"name": "好帅短剧(py)",
-			"type": 3,
-			"api": "./plugin/html/好帅短剧.py",
+			"api": "./plugin/app/海马影视APP.py",
 			"searchable": 1,
 			"quickSearch": 1,
 			"filterable": 1,
@@ -135,6 +135,17 @@
 			"ext": ""
 		},
 		{
+			"key": "剧粑粑.py",
+			"name": "剧粑粑(py)",
+			"type": 3,
+			"api": "./plugin/html/剧粑粑.py",
+			"searchable": 1,
+			"quickSearch": 1,
+			"filterable": 1,
+			"order_num": 0,
+			"ext": ""
+		},
+		{
 			"key": "剧多短剧APP.py",
 			"name": "剧多短剧APP(py)",
 			"type": 3,
@@ -146,10 +157,10 @@
 			"ext": ""
 		},
 		{
-			"key": "绝对影视.py",
-			"name": "绝对影视(py)",
+			"key": "柯南影视.py",
+			"name": "柯南影视(py)",
 			"type": 3,
-			"api": "./plugin/html/绝对影视.py",
+			"api": "./plugin/html/柯南影视.py",
 			"searchable": 1,
 			"quickSearch": 1,
 			"filterable": 1,
@@ -161,6 +172,17 @@
 			"name": "恋鱼影视APP(py)",
 			"type": 3,
 			"api": "./plugin/app/恋鱼影视APP.py",
+			"searchable": 1,
+			"quickSearch": 1,
+			"filterable": 1,
+			"order_num": 0,
+			"ext": ""
+		},
+		{
+			"key": "零度影视APP.py",
+			"name": "零度影视APP(py)",
+			"type": 3,
+			"api": "./plugin/app/零度影视APP.py",
 			"searchable": 1,
 			"quickSearch": 1,
 			"filterable": 1,
@@ -190,10 +212,21 @@
 			"ext": ""
 		},
 		{
-			"key": "皮皮虾APP.py",
-			"name": "皮皮虾APP(py)",
+			"key": "奇迹APP.py",
+			"name": "奇迹APP(py)",
 			"type": 3,
-			"api": "./plugin/app/皮皮虾APP.py",
+			"api": "./plugin/app/奇迹APP.py",
+			"searchable": 1,
+			"quickSearch": 1,
+			"filterable": 1,
+			"order_num": 0,
+			"ext": ""
+		},
+		{
+			"key": "热播APP.py",
+			"name": "热播APP(py)",
+			"type": 3,
+			"api": "./plugin/app/热播APP.py",
 			"searchable": 1,
 			"quickSearch": 1,
 			"filterable": 1,
@@ -223,10 +256,32 @@
 			"ext": ""
 		},
 		{
+			"key": "骚火电影.py",
+			"name": "骚火电影(py)",
+			"type": 3,
+			"api": "./plugin/html/骚火电影.py",
+			"searchable": 1,
+			"quickSearch": 1,
+			"filterable": 1,
+			"order_num": 0,
+			"ext": ""
+		},
+		{
 			"key": "甜圈短剧.py",
 			"name": "甜圈短剧(py)",
 			"type": 3,
 			"api": "./plugin/html/甜圈短剧.py",
+			"searchable": 1,
+			"quickSearch": 1,
+			"filterable": 1,
+			"order_num": 0,
+			"ext": ""
+		},
+		{
+			"key": "偷乐短剧.py",
+			"name": "偷乐短剧(py)",
+			"type": 3,
+			"api": "./plugin/html/偷乐短剧.py",
 			"searchable": 1,
 			"quickSearch": 1,
 			"filterable": 1,
@@ -267,6 +322,17 @@
 			"ext": ""
 		},
 		{
+			"key": "APPV2.py",
+			"name": "影探APP(py)",
+			"type": 3,
+			"api": "./plugin/app/APPV2.py",
+			"searchable": 1,
+			"quickSearch": 1,
+			"filterable": 1,
+			"order_num": 0,
+			"ext": "http://csjt.lyyytv.cn"
+		},
+		{
 			"key": "悠悠APP.py",
 			"name": "悠悠APP(py)",
 			"type": 3,
@@ -300,17 +366,6 @@
 			"ext": ""
 		},
 		{
-			"key": "APPV2.py",
-			"name": "APPV2(py)",
-			"type": 3,
-			"api": "./plugin/app/APPV2.py",
-			"searchable": 1,
-			"quickSearch": 1,
-			"filterable": 1,
-			"order_num": 0,
-			"ext": "http://cmsyt123.lyyytv.cn"
-		},
-		{
 			"key": "CliCli动漫APP.py",
 			"name": "CliCli动漫APP(py)",
 			"type": 3,
@@ -337,17 +392,6 @@
 			"name": "LIVES(py)",
 			"type": 3,
 			"api": "./plugin/html/LIVES.py",
-			"searchable": 1,
-			"quickSearch": 1,
-			"filterable": 1,
-			"order_num": 0,
-			"ext": ""
-		},
-		{
-			"key": "LREEOK.py",
-			"name": "LREEOK(py)",
-			"type": 3,
-			"api": "./plugin/html/LREEOK.py",
 			"searchable": 1,
 			"quickSearch": 1,
 			"filterable": 1,
