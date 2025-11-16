@@ -8,13 +8,13 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 sys.path.append('..')
 
 class Spider(Spider):
-    headers,timeout,ver,uas,parses,custom_parses,host,froms,detail,custom_first,category,cms,sort_rules = {
+    headers,timeout,ver,uas,parses,custom_parses,host,froms,detail,custom_first,category,cms = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
         'Connection': 'Keep-Alive',
         'Accept-Encoding': 'gzip',
         'Accept-Language': 'zh-CN,zh;q=0.8',
         'Cache-Control': 'no-cache'
-    },5,1,{},{},{},'','','','','','',''
+    },5,1,{},{},{},'','','','','',''
 
     def init(self, extend=''):
         ext = extend.strip()
@@ -35,8 +35,6 @@ class Spider(Spider):
             self.custom_parses = arr.get('parse', {})
             self.custom_first = arr.get('custom_first', 0)
             self.category = arr.get('category', 1)
-            # 获取排序规则
-            self.sort_rules = arr.get('排序', '')
             ua = arr.get('ua')
             if ua:
                 if isinstance(ua,str):
@@ -193,32 +191,8 @@ class Spider(Spider):
                     else:
                         processed_urls.append(url)
                 processed_play_urls.append('#'.join(processed_urls))
-        
-        # 线路排序功能 - 改进版
-        if self.sort_rules:
-            sort_list = [rule.strip().lower() for rule in self.sort_rules.split('>') if rule.strip()]
-            
-            # 对播放线路和URL进行排序
-            combined = list(zip(play_from, processed_play_urls))
-            
-            def sort_key(item):
-                line_name = item[0].lower()
-                # 检查线路名称是否包含排序规则中的关键词
-                for priority, keyword in enumerate(sort_list):
-                    if keyword in line_name:
-                        return priority
-                # 如果没有匹配到任何关键词，放在最后
-                return len(sort_list)
-            
-            combined.sort(key=sort_key)
-            play_from, processed_play_urls = zip(*combined) if combined else ([], [])
-            
-            video['vod_play_from'] = '$$$'.join(play_from)
-            video['vod_play_url'] = '$$$'.join(processed_play_urls)
-        else:
-            video['vod_play_from'] = '$$$'.join(play_from)
-            video['vod_play_url'] = '$$$'.join(processed_play_urls)
-            
+        video['vod_play_from'] = '$$$'.join(play_from)
+        video['vod_play_url'] = '$$$'.join(processed_play_urls)
         self.parses = {p['playerCode']: p['url'] for p in jiexi_data_list if p.get('url', '').startswith('http')}
         return {'list': [video]}
 
